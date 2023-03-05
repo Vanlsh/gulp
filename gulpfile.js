@@ -1,7 +1,6 @@
 import gulp from "gulp";
 import { path, plugins } from "./gulp/config/index.js";
-import { copy, html, reset, server, scss, js} from "./gulp/tasks/index.js";
-
+import { copy, html, reset, server, scss, js } from "./gulp/tasks/index.js";
 global.app = {
   path,
   gulp,
