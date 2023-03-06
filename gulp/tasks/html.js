@@ -15,6 +15,7 @@ export const html = () => {
     )
     .pipe(fileInclude())
     .pipe(app.plugins.replace(/@img\//g, "img/"))
+    .pipe(app.plugins.replace(/@svg\//g, "svg/"))
     .pipe(webpHtmlNoSvg())
     .pipe(
       versionNumber({
