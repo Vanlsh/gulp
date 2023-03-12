@@ -8,6 +8,9 @@ import {
   scss,
   js,
   image,
+  fontsStyle,
+  otfToTtf,
+  ttfToWoff,
 } from "./gulp/tasks/index.js";
 
 global.app = {
@@ -23,8 +26,8 @@ function watcher() {
   gulp.watch(path.watch.js, js);
   gulp.watch(path.watch.images, image);
 }
-
-const mainTask = gulp.parallel(copy, image, html, scss, js);
+const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
+const mainTask = gulp.parallel(fonts, copy, image, html, scss, js);
 const dev = gulp.series(reset, mainTask, gulp.parallel(watcher, server));
 
 gulp.task("default", dev);
