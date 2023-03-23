@@ -11,6 +11,7 @@ import {
   fontsStyle,
   otfToTtf,
   ttfToWoff,
+  svgSprite,
 } from "./gulp/tasks/index.js";
 
 global.app = {
@@ -26,6 +27,7 @@ function watcher() {
   gulp.watch(path.watch.js, js);
   gulp.watch(path.watch.images, image);
 }
+export { svgSprite };
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 const mainTask = gulp.parallel(fonts, copy, image, html, scss, js);
 const dev = gulp.series(reset, mainTask, gulp.parallel(watcher, server));

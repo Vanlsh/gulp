@@ -6,7 +6,7 @@ import { scss } from "./scss.js";
 import { js } from "./js.js";
 import { image } from "./image.js";
 import { fontsStyle, otfToTtf, ttfToWoff } from "./fonts.js";
-
+import { svgSprite } from "./svgSprite.js";
 export {
   copy,
   html,
@@ -18,4 +18,5 @@ export {
   fontsStyle,
   otfToTtf,
   ttfToWoff,
+  svgSprite,
 };
