@@ -7,7 +7,11 @@ import { js } from "./js.js";
 import { image } from "./image.js";
 import { fontsStyle, otfToTtf, ttfToWoff } from "./fonts.js";
 import { svgSprite } from "./svgSprite.js";
+import { zip } from "./zip.js";
+import { ftp } from "./ftp.js";
 export {
+  ftp,
+  zip,
   copy,
   html,
   reset,

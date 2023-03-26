@@ -33,7 +33,8 @@ export const path = {
     img: `${srcFolder}/img/**/*.*`,
   },
   clean: buildFolder,
-  srcFolder: srcFolder,
-  rootFolder: rootFolder,
-  ftp: ``,
+  buildFolder,
+  srcFolder,
+  rootFolder,
+  ftp: `test`,
 };
